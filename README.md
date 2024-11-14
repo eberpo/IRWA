@@ -1,7 +1,14 @@
     # infoRetrieval
 
-    ## Project Overview
-        This project focuses on information retrieval and ranking for social media data, specifically related to tweets from the farmers' protests. It includes preprocessing steps, query formulation, and retrieval evaluation using metrics like Precision, Recall, F1, MAP, and MRR. The notebook provides tools to process text data, generate TF-IDF scores, and evaluate query results for relevance.
+    ## Goal
+    For each query, we aim to pull out the top 20 tweets that match the best. We try three different ranking techniques to measure and sort these tweets by relevance:
+
+    ##Ranking Approaches: We utilize three different methods to assess and rank the relevance of tweets:
+        1. TF-IDF + Cosine Similarity
+        2. BM25
+        3. Custom Score + Cosine Similarity: CustomScore = (α * TF-IDF Score) + (β * Log(Likes + 1)) + (γ * Log(Retweets + 1))
+            We can see that if we change alpha beta or gamma the number of common documents changes.
+        4. Word2Vec + Cosine Similarity
 
 
     ## Installation and Environment Setup
